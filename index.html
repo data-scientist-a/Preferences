@@ -13,47 +13,55 @@
       padding: 0;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       background: rgba(255, 255, 255, 0.05);
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
     h1 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #10b981;
     }
     .question {
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
     .question h3 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: #8b5cf6;
     }
-    label {
-      display: block;
-      margin: 6px 0;
-      padding: 8px 12px;
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .option {
+      flex: 1 1 40%;
+      padding: 16px;
       background: rgba(255,255,255,0.08);
-      border-radius: 8px;
+      border-radius: 12px;
+      text-align: center;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s;
     }
-    label:hover {
+    .option:hover {
       background: rgba(255,255,255,0.18);
+      transform: translateY(-3px);
     }
-    input[type="radio"] {
-      margin-right: 10px;
+    .option.selected {
+      background: #10b981;
+      color: #fff;
+      font-weight: bold;
     }
     button {
       display: block;
-      margin: 30px auto 0;
-      padding: 12px 24px;
-      font-size: 16px;
+      margin: 40px auto 0;
+      padding: 14px 28px;
+      font-size: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       background: #10b981;
       color: #fff;
       cursor: pointer;
@@ -62,98 +70,128 @@
     button:hover {
       background: #059669;
     }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      text-align: center;
+      font-size: 18px;
+      color: #f3f4f6;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Chestionar Personal</h1>
+    <form id="quizForm">
 
-    <form>
       <!-- Întrebarea 1 -->
       <div class="question">
         <h3>1. Care este vârsta ta?</h3>
-        <label><input type="radio" name="varsta" value="0-10">0-10</label>
-        <label><input type="radio" name="varsta" value="10-20">10-20</label>
-        <label><input type="radio" name="varsta" value="20-30">20-30</label>
-        <label><input type="radio" name="varsta" value="30-40">30-40</label>
-        <label><input type="radio" name="varsta" value="40+">40+</label>
+        <div class="options">
+          <div class="option" data-value="0-10">0-10</div>
+          <div class="option" data-value="10-20">10-20</div>
+          <div class="option" data-value="20-30">20-30</div>
+          <div class="option" data-value="30-40">30-40</div>
+          <div class="option" data-value="40+">40+</div>
+        </div>
       </div>
 
       <!-- Întrebarea 2 -->
       <div class="question">
         <h3>2. Care este disciplina ta preferată de învățat?</h3>
-        <label><input type="radio" name="disciplina" value="Matematică">Matematică</label>
-        <label><input type="radio" name="disciplina" value="Literatură">Literatură</label>
-        <label><input type="radio" name="disciplina" value="Istorie">Istorie</label>
-        <label><input type="radio" name="disciplina" value="Științe">Științe</label>
-        <label><input type="radio" name="disciplina" value="Arte">Arte</label>
+        <div class="options">
+          <div class="option" data-value="Matematică">Matematică</div>
+          <div class="option" data-value="Literatură">Literatură</div>
+          <div class="option" data-value="Istorie">Istorie</div>
+          <div class="option" data-value="Științe">Științe</div>
+          <div class="option" data-value="Arte">Arte</div>
+        </div>
       </div>
 
       <!-- Întrebarea 3 -->
       <div class="question">
         <h3>3. Ce jocuri îți plac (fizice)?</h3>
-        <label><input type="radio" name="jocuri" value="Fotbal">Fotbal</label>
-        <label><input type="radio" name="jocuri" value="Baschet">Baschet</label>
-        <label><input type="radio" name="jocuri" value="Tenis">Tenis</label>
-        <label><input type="radio" name="jocuri" value="Înot">Înot</label>
-        <label><input type="radio" name="jocuri" value="Atletism">Atletism</label>
+        <div class="options">
+          <div class="option" data-value="Fotbal">Fotbal</div>
+          <div class="option" data-value="Baschet">Baschet</div>
+          <div class="option" data-value="Tenis">Tenis</div>
+          <div class="option" data-value="Înot">Înot</div>
+          <div class="option" data-value="Atletism">Atletism</div>
+        </div>
       </div>
 
       <!-- Întrebarea 4 -->
       <div class="question">
         <h3>4. Ce parte a zilei preferi?</h3>
-        <label><input type="radio" name="parte_zi" value="Dimineața">Dimineața</label>
-        <label><input type="radio" name="parte_zi" value="Prânz">Prânz</label>
-        <label><input type="radio" name="parte_zi" value="Seara">Seara</label>
-        <label><input type="radio" name="parte_zi" value="Noaptea">Noaptea</label>
+        <div class="options">
+          <div class="option" data-value="Dimineața">Dimineața</div>
+          <div class="option" data-value="Prânz">Prânz</div>
+          <div class="option" data-value="Seara">Seara</div>
+          <div class="option" data-value="Noaptea">Noaptea</div>
+        </div>
       </div>
 
       <!-- Întrebarea 5 -->
       <div class="question">
         <h3>5. Care sunt scriitorii sau cărțile preferate?</h3>
-        <label><input type="radio" name="carti" value="Golful francezului">Golful francezului</label>
-        <label><input type="radio" name="carti" value="Mihai Eminescu">Mihai Eminescu</label>
-        <label><input type="radio" name="carti" value="Tom Sawyer">Tom Sawyer</label>
-        <label><input type="radio" name="carti" value="Legendele Olimpului">Legendele Olimpului</label>
-        <label><input type="radio" name="carti" value="Casa de la malul mării">Casa de la malul mării</label>
+        <div class="options">
+          <div class="option" data-value="Golful francezului">Golful francezului</div>
+          <div class="option" data-value="Mihai Eminescu">Mihai Eminescu</div>
+          <div class="option" data-value="Tom Sawyer">Tom Sawyer</div>
+          <div class="option" data-value="Legendele Olimpului">Legendele Olimpului</div>
+          <div class="option" data-value="Casa de la malul mării">Casa de la malul mării</div>
+        </div>
       </div>
 
       <!-- Întrebarea 6 -->
       <div class="question">
         <h3>6. Care este locul tău preferat de vacanță?</h3>
-        <label><input type="radio" name="vacanta" value="Munte">Munte</label>
-        <label><input type="radio" name="vacanta" value="Mare">Mare</label>
-        <label><input type="radio" name="vacanta" value="Orașe istorice">Orașe istorice</label>
-        <label><input type="radio" name="vacanta" value="Sat tradițional">Sat tradițional</label>
+        <div class="options">
+          <div class="option" data-value="Munte">Munte</div>
+          <div class="option" data-value="Mare">Mare</div>
+          <div class="option" data-value="Orașe istorice">Orașe istorice</div>
+          <div class="option" data-value="Sat tradițional">Sat tradițional</div>
+        </div>
       </div>
 
       <!-- Întrebarea 7 -->
       <div class="question">
         <h3>7. Îți place să fii înconjurat de mulți oameni sau doar de câțiva apropiați?</h3>
-        <label><input type="radio" name="oameni" value="Mulți oameni">Mulți oameni</label>
-        <label><input type="radio" name="oameni" value="Câțiva apropiați">Câțiva apropiați</label>
+        <div class="options">
+          <div class="option" data-value="Mulți oameni">Mulți oameni</div>
+          <div class="option" data-value="Câțiva apropiați">Câțiva apropiați</div>
+        </div>
       </div>
 
       <!-- Întrebarea 8 -->
       <div class="question">
         <h3>8. Ce fel de cină preferi?</h3>
-        <label><input type="radio" name="cina" value="Tradițională">Tradițională</label>
-        <label><input type="radio" name="cina" value="Modernă">Modernă</label>
-        <label><input type="radio" name="cina" value="Vegetariană">Vegetariană</label>
-        <label><input type="radio" name="cina" value="Internațională">Internațională</label>
+        <div class="options">
+          <div class="option" data-value="Tradițională">Tradițională</div>
+          <div class="option" data-value="Modernă">Modernă</div>
+          <div class="option" data-value="Vegetariană">Vegetariană</div>
+          <div class="option" data-value="Internațională">Internațională</div>
+        </div>
       </div>
 
       <!-- Întrebarea 9 -->
       <div class="question">
         <h3>9. Alege un meniu pentru ziua ta de naștere:</h3>
-        <label><input type="radio" name="meniu" value="Românesc">Românesc</label>
-        <label><input type="radio" name="meniu" value="Italian">Italian</label>
-        <label><input type="radio" name="meniu" value="Francez">Francez</label>
-        <label><input type="radio" name="meniu" value="Japonez">Japonez</label>
+        <div class="options">
+          <div class="option" data-value="Românesc">Românesc</div>
+          <div class="option" data-value="Italian">Italian</div>
+          <div class="option" data-value="Francez">Francez</div>
+          <div class="option" data-value="Japonez">Japonez</div>
+        </div>
       </div>
 
       <!-- Întrebarea 10 -->
       <div class="question">
         <h3>10. Ce povești sau desene animate îți plăceau în copilărie?</h3>
-        <label><input type="radio" name="povesti" value="Albă ca Zăpada">Albă ca Zăpada</label>
-        <label><input type="radio" name="povesti"
+        <div class="options">
+          <div class="option" data-value="Albă ca Zăpada">Albă ca Zăpada</div>
+          <div class="option" data-value="Hansel și Gretel">Hansel și Gretel</div>
+          <div class="option" data-value="Făt-Frumos">Făt-Frumos</div>
+        </div>
