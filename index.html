@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chestionar Elegant</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #10b981;
+    }
+    .question {
+      margin-bottom: 25px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #8b5cf6;
+    }
+    label {
+      display: block;
+      margin: 6px 0;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    label:hover {
+      background: rgba(255,255,255,0.18);
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #10b981;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #059669;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chestionar Personal</h1>
+
+    <form>
+      <!-- Întrebarea 1 -->
+      <div class="question">
+        <h3>1. Care este vârsta ta?</h3>
+        <label><input type="radio" name="varsta" value="0-10">0-10</label>
+        <label><input type="radio" name="varsta" value="10-20">10-20</label>
+        <label><input type="radio" name="varsta" value="20-30">20-30</label>
+        <label><input type="radio" name="varsta" value="30-40">30-40</label>
+        <label><input type="radio" name="varsta" value="40+">40+</label>
+      </div>
+
+      <!-- Întrebarea 2 -->
+      <div class="question">
+        <h3>2. Care este disciplina ta preferată de învățat?</h3>
+        <label><input type="radio" name="disciplina" value="Matematică">Matematică</label>
+        <label><input type="radio" name="disciplina" value="Literatură">Literatură</label>
+        <label><input type="radio" name="disciplina" value="Istorie">Istorie</label>
+        <label><input type="radio" name="disciplina" value="Științe">Științe</label>
+        <label><input type="radio" name="disciplina" value="Arte">Arte</label>
+      </div>
+
+      <!-- Întrebarea 3 -->
+      <div class="question">
+        <h3>3. Ce jocuri îți plac (fizice)?</h3>
+        <label><input type="radio" name="jocuri" value="Fotbal">Fotbal</label>
+        <label><input type="radio" name="jocuri" value="Baschet">Baschet</label>
+        <label><input type="radio" name="jocuri" value="Tenis">Tenis</label>
+        <label><input type="radio" name="jocuri" value="Înot">Înot</label>
+        <label><input type="radio" name="jocuri" value="Atletism">Atletism</label>
+      </div>
+
+      <!-- Întrebarea 4 -->
+      <div class="question">
+        <h3>4. Ce parte a zilei preferi?</h3>
+        <label><input type="radio" name="parte_zi" value="Dimineața">Dimineața</label>
+        <label><input type="radio" name="parte_zi" value="Prânz">Prânz</label>
+        <label><input type="radio" name="parte_zi" value="Seara">Seara</label>
+        <label><input type="radio" name="parte_zi" value="Noaptea">Noaptea</label>
+      </div>
+
+      <!-- Întrebarea 5 -->
+      <div class="question">
+        <h3>5. Care sunt scriitorii sau cărțile preferate?</h3>
+        <label><input type="radio" name="carti" value="Golful francezului">Golful francezului</label>
+        <label><input type="radio" name="carti" value="Mihai Eminescu">Mihai Eminescu</label>
+        <label><input type="radio" name="carti" value="Tom Sawyer">Tom Sawyer</label>
+        <label><input type="radio" name="carti" value="Legendele Olimpului">Legendele Olimpului</label>
+        <label><input type="radio" name="carti" value="Casa de la malul mării">Casa de la malul mării</label>
+      </div>
+
+      <!-- Întrebarea 6 -->
+      <div class="question">
+        <h3>6. Care este locul tău preferat de vacanță?</h3>
+        <label><input type="radio" name="vacanta" value="Munte">Munte</label>
+        <label><input type="radio" name="vacanta" value="Mare">Mare</label>
+        <label><input type="radio" name="vacanta" value="Orașe istorice">Orașe istorice</label>
+        <label><input type="radio" name="vacanta" value="Sat tradițional">Sat tradițional</label>
+      </div>
+
+      <!-- Întrebarea 7 -->
+      <div class="question">
+        <h3>7. Îți place să fii înconjurat de mulți oameni sau doar de câțiva apropiați?</h3>
+        <label><input type="radio" name="oameni" value="Mulți oameni">Mulți oameni</label>
+        <label><input type="radio" name="oameni" value="Câțiva apropiați">Câțiva apropiați</label>
+      </div>
+
+      <!-- Întrebarea 8 -->
+      <div class="question">
+        <h3>8. Ce fel de cină preferi?</h3>
+        <label><input type="radio" name="cina" value="Tradițională">Tradițională</label>
+        <label><input type="radio" name="cina" value="Modernă">Modernă</label>
+        <label><input type="radio" name="cina" value="Vegetariană">Vegetariană</label>
+        <label><input type="radio" name="cina" value="Internațională">Internațională</label>
+      </div>
+
+      <!-- Întrebarea 9 -->
+      <div class="question">
+        <h3>9. Alege un meniu pentru ziua ta de naștere:</h3>
+        <label><input type="radio" name="meniu" value="Românesc">Românesc</label>
+        <label><input type="radio" name="meniu" value="Italian">Italian</label>
+        <label><input type="radio" name="meniu" value="Francez">Francez</label>
+        <label><input type="radio" name="meniu" value="Japonez">Japonez</label>
+      </div>
+
+      <!-- Întrebarea 10 -->
+      <div class="question">
+        <h3>10. Ce povești sau desene animate îți plăceau în copilărie?</h3>
+        <label><input type="radio" name="povesti" value="Albă ca Zăpada">Albă ca Zăpada</label>
+        <label><input type="radio" name="povesti"
