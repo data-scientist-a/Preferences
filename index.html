@@ -85,8 +85,7 @@
   <div class="container">
     <h1>Chestionar Personal</h1>
     <form id="quizForm">
-
-      <!-- Întrebarea 1 -->
+      <!-- Exemplu întrebare -->
       <div class="question">
         <h3>1. Care este vârsta ta?</h3>
         <div class="options">
@@ -97,101 +96,45 @@
           <div class="option" data-value="40+">40+</div>
         </div>
       </div>
+      <!-- Adaugă aici restul întrebărilor exact cum ți-am arătat -->
+      <button type="submit">Trimite</button>
+    </form>
+    <div id="result" class="result" style="display:none;"></div>
+  </div>
 
-      <!-- Întrebarea 2 -->
-      <div class="question">
-        <h3>2. Care este disciplina ta preferată de învățat?</h3>
-        <div class="options">
-          <div class="option" data-value="Matematică">Matematică</div>
-          <div class="option" data-value="Literatură">Literatură</div>
-          <div class="option" data-value="Istorie">Istorie</div>
-          <div class="option" data-value="Științe">Științe</div>
-          <div class="option" data-value="Arte">Arte</div>
-        </div>
-      </div>
+  <script>
+    // Marchează selecția
+    document.querySelectorAll('.options').forEach(group => {
+      group.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', () => {
+          group.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+        });
+      });
+    });
 
-      <!-- Întrebarea 3 -->
-      <div class="question">
-        <h3>3. Ce jocuri îți plac (fizice)?</h3>
-        <div class="options">
-          <div class="option" data-value="Fotbal">Fotbal</div>
-          <div class="option" data-value="Baschet">Baschet</div>
-          <div class="option" data-value="Tenis">Tenis</div>
-          <div class="option" data-value="Înot">Înot</div>
-          <div class="option" data-value="Atletism">Atletism</div>
-        </div>
-      </div>
+    // Colectează răspunsurile și afișează un mic profil
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const answers = {};
+      document.querySelectorAll('.question').forEach(q => {
+        const selected = q.querySelector('.option.selected');
+        if (selected) {
+          const key = q.querySelector('h3').innerText;
+          answers[key] = selected.dataset.value;
+        }
+      });
 
-      <!-- Întrebarea 4 -->
-      <div class="question">
-        <h3>4. Ce parte a zilei preferi?</h3>
-        <div class="options">
-          <div class="option" data-value="Dimineața">Dimineața</div>
-          <div class="option" data-value="Prânz">Prânz</div>
-          <div class="option" data-value="Seara">Seara</div>
-          <div class="option" data-value="Noaptea">Noaptea</div>
-        </div>
-      </div>
+      let rezultat = "Profilul tău: ";
+      if (answers["1. Care este vârsta ta?"] === "10-20") rezultat += "tânăr și plin de energie. ";
+      if (answers["1. Care este vârsta ta?"] === "40+") rezultat += "matur și experimentat. ";
+      if (answers["4. Ce parte a zilei preferi?"] === "Noaptea") rezultat += "creativ și visător. ";
+      if (answers["6. Care este locul tău preferat de vacanță?"] === "Mare") rezultat += "iubești libertatea și relaxarea.";
 
-      <!-- Întrebarea 5 -->
-      <div class="question">
-        <h3>5. Care sunt scriitorii sau cărțile preferate?</h3>
-        <div class="options">
-          <div class="option" data-value="Golful francezului">Golful francezului</div>
-          <div class="option" data-value="Mihai Eminescu">Mihai Eminescu</div>
-          <div class="option" data-value="Tom Sawyer">Tom Sawyer</div>
-          <div class="option" data-value="Legendele Olimpului">Legendele Olimpului</div>
-          <div class="option" data-value="Casa de la malul mării">Casa de la malul mării</div>
-        </div>
-      </div>
+      document.getElementById('result').style.display = "block";
+      document.getElementById('result').innerText = rezultat;
+    });
+  </script>
+</body>
+</html>
 
-      <!-- Întrebarea 6 -->
-      <div class="question">
-        <h3>6. Care este locul tău preferat de vacanță?</h3>
-        <div class="options">
-          <div class="option" data-value="Munte">Munte</div>
-          <div class="option" data-value="Mare">Mare</div>
-          <div class="option" data-value="Orașe istorice">Orașe istorice</div>
-          <div class="option" data-value="Sat tradițional">Sat tradițional</div>
-        </div>
-      </div>
-
-      <!-- Întrebarea 7 -->
-      <div class="question">
-        <h3>7. Îți place să fii înconjurat de mulți oameni sau doar de câțiva apropiați?</h3>
-        <div class="options">
-          <div class="option" data-value="Mulți oameni">Mulți oameni</div>
-          <div class="option" data-value="Câțiva apropiați">Câțiva apropiați</div>
-        </div>
-      </div>
-
-      <!-- Întrebarea 8 -->
-      <div class="question">
-        <h3>8. Ce fel de cină preferi?</h3>
-        <div class="options">
-          <div class="option" data-value="Tradițională">Tradițională</div>
-          <div class="option" data-value="Modernă">Modernă</div>
-          <div class="option" data-value="Vegetariană">Vegetariană</div>
-          <div class="option" data-value="Internațională">Internațională</div>
-        </div>
-      </div>
-
-      <!-- Întrebarea 9 -->
-      <div class="question">
-        <h3>9. Alege un meniu pentru ziua ta de naștere:</h3>
-        <div class="options">
-          <div class="option" data-value="Românesc">Românesc</div>
-          <div class="option" data-value="Italian">Italian</div>
-          <div class="option" data-value="Francez">Francez</div>
-          <div class="option" data-value="Japonez">Japonez</div>
-        </div>
-      </div>
-
-      <!-- Întrebarea 10 -->
-      <div class="question">
-        <h3>10. Ce povești sau desene animate îți plăceau în copilărie?</h3>
-        <div class="options">
-          <div class="option" data-value="Albă ca Zăpada">Albă ca Zăpada</div>
-          <div class="option" data-value="Hansel și Gretel">Hansel și Gretel</div>
-          <div class="option" data-value="Făt-Frumos">Făt-Frumos</div>
-        </div>
