@@ -32,23 +32,28 @@
       gap: 12px;
     }
     .option {
-      flex: 1 1 40%;
-      padding: 16px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 12px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .option:hover {
-      background: rgba(255,255,255,0.18);
-      transform: translateY(-3px);
-    }
-    .option.selected {
-      background: #10b981;
-      color: #fff;
-      font-weight: bold;
-    }
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 6px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  background: #dcdcdc;
+}
+
+.option.selected {
+  background: linear-gradient(135deg, #1a1a1a, #3b0000); /* tonuri întunecate, dramatice */
+  color: #ffffff;
+  font-weight: bold;
+  border: 2px solid #ff0000; /* roșu intens pentru efect „rău” */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); /* strălucire roșie ca un râu de foc */
+  transform: scale(1.05); /* ușor mai mare când e selectat */
+}
+
     button {
       display: block;
       margin: 40px auto 0;
