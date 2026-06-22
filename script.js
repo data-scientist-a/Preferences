@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  /*  Mică caracterizare simplă pe baza răspunsurilor
+  // Mică caracterizare simplă pe baza răspunsurilor
     let message = "Profilul tău: ";
     if (answers.includes("Literatură") || answers.includes("Mihai Eminescu")) {
       message += "Ești o persoană sensibilă și creativă, atrasă de frumos și reflecție. ";
@@ -55,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultDiv = document.getElementById("result");
     resultDiv.textContent = message;
   });
-});*/
+});
 // Mică caracterizare pe baza combinațiilor de răspunsuri
-let message = "Profilul tău: ";
+/*let message = "Profilul tău: ";
 
 // Exemplu: dacă la întrebarea despre disciplină alege "Literatură"
 // și la partea zilei alege "Noaptea"
@@ -87,5 +87,5 @@ if (message === "Profilul tău: ") {
 
 // Afișează rezultatul în containerul #result
 const resultDiv = document.getElementById("result");
-resultDiv.textContent = message;
+resultDiv.textContent = message;*/
 
