@@ -117,11 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Build a richer profile
     let profile = [];
 
-    // Age
-    if (answers.includes("0-10")) profile.push("Ai un suflet copilăros și plin de curiozitate.");
-    if (answers.includes("20-30")) profile.push("Ești în perioada explorării și afirmării personale.");
-    if (answers.includes("40+")) profile.push("Ai maturitate și experiență, dar și dorința de a te bucura de viață.");
-     if (answers.includes("0-10")) profile.push("Ai un suflet copilăros și plin de curiozitate.");
+    // Shop
+    if (answers.includes("Ulei de masline, smochine, struguri, cacao, miere, peste, faina.")) profile.push("Penumbra sacra si mistica a Levantului. Abundenta.");
+    if (answers.includes("Varza, spanac, oua, piept de pui, branza.")) profile.push("Claritate, vitalitate. Dimineata la tara.");
+    if (answers.includes("Apa minerala, lime, frunze de ceai, ciocolata neagra.")) profile.push("Contemplare, purificare, detasare, creatie.");
+     if (answers.includes("Bomboane, Cola, inghetate, rosii, salam, cascaval.")) profile.push("Satisfactie, nostalgie, libertate.");
 
     // Discipline
     if (answers.includes("Literatură")) profile.push("Esti inclinat spre reflecție.");
