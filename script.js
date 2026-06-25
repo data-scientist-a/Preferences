@@ -121,19 +121,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (answers.includes("0-10")) profile.push("Ai un suflet copilăros și plin de curiozitate.");
     if (answers.includes("20-30")) profile.push("Ești în perioada explorării și afirmării personale.");
     if (answers.includes("40+")) profile.push("Ai maturitate și experiență, dar și dorința de a te bucura de viață.");
+     if (answers.includes("0-10")) profile.push("Ai un suflet copilăros și plin de curiozitate.");
 
     // Discipline
     if (answers.includes("Literatură")) profile.push("Esti inclinat spre reflecție.");
     if (answers.includes("Matematică")) profile.push("Ai o minte logică și analitică, orientată spre soluții clare.");
     if (answers.includes("Arte")) profile.push("Îți place să exprimi frumosul și să creezi armonie.");
+    if (answers.includes("Arte")) profile.push("Îți place să exprimi frumosul și să creezi armonie.");
 
     // Part of day
-    if (answers.includes("Dimineața")) profile.push("Ești energic și organizat, preferi începuturile proaspete.");
+    if (answers.includes("Dimineața")) profile.push("Ești energic, preferi începuturile proaspete.");
+    if (answers.includes("Noaptea")) profile.push("Ai o latură visătoare și creativă, găsești inspirație în liniște.");
+    if (answers.includes("Noaptea")) profile.push("Ai o latură visătoare și creativă, găsești inspirație în liniște.");
     if (answers.includes("Noaptea")) profile.push("Ai o latură visătoare și creativă, găsești inspirație în liniște.");
 
     // Vacation
     if (answers.includes("Mare")) profile.push("Îți place libertatea și relaxarea, ai inclinatii romantice.");
     if (answers.includes("Munte")) profile.push("Ai spirit aventurier și cauți provocări.");
+    if (answers.includes("Orașe istorice")) profile.push("Ești curios și atras de cultură și tradiții.");
     if (answers.includes("Orașe istorice")) profile.push("Ești curios și atras de cultură și tradiții.");
 
     // Superpower
@@ -151,7 +156,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Childhood stories
     if (answers.includes("Hansel si Gretel")) profile.push("Ai o fire curioasă și aventuroasă.");
     if (answers.includes("Alba ca Zapada")) profile.push("Crezi în bunătate și în finaluri fericite.");
-     if (answers.includes("Zorro")) profile.push("Vrei sa traiesti din plin, sa simti intensitatea momentului.");
+    if (answers.includes("Zorro")) profile.push("Vrei sa traiesti din plin, sa simti intensitatea momentului.");
+    if (answers.includes("Zorro")) profile.push("Vrei sa traiesti din plin, sa simti intensitatea momentului.");
+    
+
 
     // Special combinations
     if (answers.includes("Literatură") && answers.includes("Noaptea")) {
