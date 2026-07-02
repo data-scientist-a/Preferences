@@ -1,93 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-  const options = document.querySelectorAll(".option");
 
-  options.forEach(option => {
-    option.addEventListener("click", () => {
-      // scoate selecția anterioară din aceeași întrebare
-      const parent = option.parentElement;
-      parent.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
-
-      // marchează opțiunea curentă ca selectată
-      option.classList.add("selected");
-    });
-  });
-
-  const form = document.getElementById("quizForm");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const answers = [];
-    document.querySelectorAll(".question").forEach(question => {
-      const selected = question.querySelector(".option.selected");
-      if (selected) {
-        answers.push(selected.dataset.value);
-      } else {
-        answers.push("Neselectat");
-      }
-    });
-
-  // Mică caracterizare simplă pe baza răspunsurilor
-    let message = "Profilul tău: ";
-    if (answers.includes("Literatură") || answers.includes("Mihai Eminescu")) {
-      message += "Ești o persoană sensibilă și creativă, atrasă de frumos și reflecție. ";
-    }
-    if (answers.includes("Matematică") || answers.includes("Științe")) {
-      message += "Ai o minte logică și analitică, orientată spre descoperire și cunoaștere. ";
-    }
-    if (answers.includes("Mare")) {
-      message += "Îți place libertatea și relaxarea, ești visător și romantic. ";
-    }
-    if (answers.includes("Munte")) {
-      message += "Ai spirit aventurier și iubești provocările. ";
-    }
-    if (answers.includes("Mulți oameni")) {
-      message += "Ești sociabil și plin de energie. ";
-    }
-    if (answers.includes("Câțiva apropiați")) {
-      message += "Prețuiești intimitatea și relațiile profunde. ";
-    }
-
-    if (message === "Profilul tău: ") {
-      message += "Ești o persoană unică, cu preferințe variate.";
-    }
-
-    // Afișează rezultatul în containerul #result
-    const resultDiv = document.getElementById("result");
-    resultDiv.textContent = message;
-  });
-});
-// Mică caracterizare pe baza combinațiilor de răspunsuri
-/*let message = "Profilul tău: ";
-
-// Exemplu: dacă la întrebarea despre disciplină alege "Literatură"
-// și la partea zilei alege "Noaptea"
-if (answers.includes("Literatură") && answers.includes("Noaptea")) {
-  message += "Ești o persoană sensibilă, creativă și visătoare, atrasă de frumos și reflecție. ";
-}
-
-// Alt exemplu: Matematică + Dimineața
-if (answers.includes("Matematică") && answers.includes("Dimineața")) {
-  message += "Ai o minte logică și analitică, dar și foarte organizată și energică dimineața. ";
-}
-
-// Alt exemplu: Mare + Mulți oameni
-if (answers.includes("Mare") && answers.includes("Mulți oameni")) {
-  message += "Iubești libertatea, relaxarea și ești sociabil, plin de energie. ";
-}
-
-// Alt exemplu: Munte + Câțiva apropiați
-if (answers.includes("Munte") && answers.includes("Câțiva apropiați")) {
-  message += "Ai spirit aventurier, dar prețuiești intimitatea și relațiile profunde. ";
-}
-
-// Dacă nu s-a potrivit nicio combinație
-if (message === "Profilul tău: ") {
-  message += "Ești o persoană unică, cu preferințe variate.";
-}
-
-// Afișează rezultatul în containerul #result
-const resultDiv = document.getElementById("result");
-resultDiv.textContent = message;*/
 document.addEventListener("DOMContentLoaded", () => {
   const options = document.querySelectorAll(".option");
 
@@ -123,23 +34,42 @@ document.addEventListener("DOMContentLoaded", () => {
     if (answers.includes("Apa minerala, lime, frunze de ceai, ciocolata neagra.")) profile.push("Contemplare, purificare, detasare, creatie.");
      if (answers.includes("Bomboane, Cola, inghetate, rosii, salam, cascaval.")) profile.push("Satisfactie, nostalgie, libertate.");
 
-    // Discipline
-    if (answers.includes("Literatură")) profile.push("Esti inclinat spre reflecție.");
-    if (answers.includes("Matematică")) profile.push("Ai o minte logică și analitică, orientată spre soluții clare.");
-    if (answers.includes("Arte")) profile.push("Îți place să exprimi frumosul și să creezi armonie.");
-    if (answers.includes("Arte")) profile.push("Îți place să exprimi frumosul și să creezi armonie.");
+    // Activity
+    if (answers.includes("Desenezi impreuna cu familia.")) profile.push("Ai un suflet cald si gasesti frumusetea in momentele simple, pline de armonie.");
+    if (answers.includes("Citesti o carte.")) profile.push("Ai un spirit curios si reflexiv. Lumea ta interioara este bogata si fascinanta.");
+    if (answers.includes("Planifici urmatoarea zi.")) profile.push("Esti organizata, iti pretuiesti timpul si pasesti cu incredere in viitor.");
+    if (answers.includes("Joci razboi naval/fete baieti.")) profile.push("Esti o fire dinamica si competitiva, care pastreaza viu spiritul jocului si bucuria pura a copilariei.");
+    if (answers.includes("Scrii ganduri/povestiri.")) profile.push("Esti un creator sensibil si profund, un observator atent al vietii care dai o forma magica propriilor tale trairi.");
+    
+    // Action
+    if (answers.includes("La 4 dimineata te duci in mare si inoti pana obosesti.")) profile.push("Esti un spirit liber si curajos care cauta absolutul si nu se teme sa se piarda in imensitate pentru a gasi linistea interioara.");
+    if (answers.includes("Seara alergi 5 km.")) profile.push("Esti o persoana hotarata si disciplinata care stie sa transforme efortul in eliberare.");
+    if (answers.includes("Calaresti o zi intreaga in prerie.")) profile.push("Esti setos de aventura si autenticitate, un suflet salbatic care isi gaseste fericirea in gustul libertatii depline.");
+    if (answers.includes("Cumperi un carnet si inveti pana il termini.")) profile.push("Ai o minte flamada de cunoastere si sclipitoare.");
+    if (answers.includes("In fiecare zi faci 100 flotari, genoflexiuni...")) profile.push("Un caracter puternic care crede ca marile victorii ale vietii se construiesc discret , zi de zi.");
 
-    // Part of day
-    if (answers.includes("Dimineața")) profile.push("Ești energic, preferi începuturile proaspete.");
-    if (answers.includes("Noaptea")) profile.push("Ai o latură visătoare și creativă, găsești inspirație în liniște.");
-    if (answers.includes("Noaptea")) profile.push("Ai o latură visătoare și creativă, găsești inspirație în liniște.");
-    if (answers.includes("Noaptea")) profile.push("Ai o latură visătoare și creativă, găsești inspirație în liniște.");
+    // Part of day 
+    if (answers.includes("Dimineața")) profile.push("Optimist, plin de energie, un iubitor al noilor inceputuri.");
+    if (answers.includes("Amiaza")) profile.push("Un om al actiunii, pragmatic si solar. ");
+    if (answers.includes("Seara")) profile.push("Pretuiesti armonia si tihna. Pentru tine adevarata magie incepe cand ritmul lumii incetineste.");
+    if (answers.includes("Noaptea")) profile.push("Gasesti adevarata libertate si inspiratie in linistea deplina, ai un suflet profund, misterios si independent.");
 
-    // Vacation
-    if (answers.includes("Mare")) profile.push("Îți place libertatea și relaxarea, ai inclinatii romantice.");
-    if (answers.includes("Munte")) profile.push("Ai spirit aventurier și cauți provocări.");
-    if (answers.includes("Orașe istorice")) profile.push("Ești curios și atras de cultură și tradiții.");
-    if (answers.includes("Orașe istorice")) profile.push("Ești curios și atras de cultură și tradiții.");
+    // Book
+    if (answers.includes("Golful francezului")) profile.push("Tanjesti dupa o evadare din tiparele rigide ale cotidianului. Rebela, libera si rafinata, te atrage misterul, noptile pline de secrete si pasiunea salbatica.");
+    if (answers.includes("Quo Vadis")) profile.push("Esti nobila, puternica si profund morala, atrasa de marile adevaruri ale istoriei. O persoana capabila de sacrificiu si o intensitate interioara rara, ghidata de o credinta de neclintit in dragoste si dreptate.");
+    if (answers.includes("Tom Sawyer")) profile.push("Pastrezi in tine acea atmosfera calda si luminoasa a copilariei, libertatea zilelor lungi de vara, suflet vesnic tanar, plin de viata si de o curiozitate molipsitoare.");
+    if (answers.includes("Stapanul inelelor")) profile.push("Personalitatea ta reflecta spiritul de loialitate, curajul in fata intunericului si frumusetea aspra, dar plina de speranta si maretie a naturii.");
+     if (answers.includes("Casa de la malul marii")) profile.push("Esti o persoana profund nostalgica si romantica. La fel ca atmosfera cartii, emani acea nostalgie blanda a verilor din trecut si parfumul sarat al marii care vindeca.");
+
+
+     // Vacation
+    if (answers.includes("Munte")) profile.push("Ai nevoie de cer si poteci linistite pentru a-ti limpezi gandurile.");
+    if (answers.includes("Mare")) profile.push("ai nevoie de libertate si miscare cuntinua. Te atrag orizonturile deschise, ritmul hipnotic al valurilor si detasarea totala.");
+    if (answers.includes("Orașe istorice")) profile.push("Fascinata de povesti, arhitectura si secretele trecutului, iti place sa te plimbi pe strazi pietruite unde fiecare cladire are ceva de povestit.");
+    if (answers.includes("Reliefuri impresionante")) profile.push("Ai sete vie de spectaculos si o atractie nativa fata de maretia bruta a planetei.");
+
+
+
 
     // Superpower
     if (answers.includes("Invizibilitate")) profile.push("Ai dorința de a observa lumea din umbră și de a înțelege subtilitățile.");
