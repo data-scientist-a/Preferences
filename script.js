@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
      // Vacation
     if (answers.includes("Munte")) profile.push("Ai nevoie de cer si poteci linistite pentru a-ti limpezi gandurile.");
-    if (answers.includes("Mare")) profile.push("ai nevoie de libertate si miscare cuntinua. Te atrag orizonturile deschise, ritmul hipnotic al valurilor si detasarea totala.");
+    if (answers.includes("Mare")) profile.push("Ai nevoie de libertate si miscare cuntinua. Te atrag orizonturile deschise, ritmul hipnotic al valurilor si detasarea totala.");
     if (answers.includes("Orașe istorice")) profile.push("Fascinata de povesti, arhitectura si secretele trecutului, iti place sa te plimbi pe strazi pietruite unde fiecare cladire are ceva de povestit.");
     if (answers.includes("Reliefuri impresionante")) profile.push("Ai sete vie de spectaculos si o atractie nativa fata de maretia bruta a planetei.");
 
@@ -72,34 +72,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Superpower
-    if (answers.includes("Invizibilitate")) profile.push("Ai dorința de a observa lumea din umbră și de a înțelege subtilitățile.");
-    if (answers.includes("Calatorie in timp")) profile.push("Ești nostalgic și curios, vrei să explorezi trecutul și viitorul.");
-    if (answers.includes("Bani nelimitati")) profile.push("Îți dorești siguranță și libertate materială.");
-    if (answers.includes("Calatorie in spatiu")) profile.push("Vrei sa vezi multe locuri din lume.");
+    if (answers.includes("Invizibilitate")) profile.push("Iti place sa descoperii lumea fara piedici, de a intelege adevaruri ascunse si de a te bucura de o libertate totala.");
+    if (answers.includes("Calatorie in timp")) profile.push("Te atrage posibilitatea de a rescrie regrete, de a retrai momente de epoca, pentru tine prezentul e doar o mica parte dintr o poveste mult mai mare.");
+    if (answers.includes("Calatorie in spatiu")) profile.push("Setea de necunoscut te indeamna catre orizonturi noi, fara sa cunosti limitele.");
+    if (answers.includes("Bani nelimitati")) profile.push("Ai o minte pragmatica si un puternic simt al controlului. Ai vrea siguranta pentru cei dragi si sa controlezi lumea dupa propriile reguli.");
+   
 
     // Dinner
-    if (answers.includes("Shawarma")) profile.push("Ești spontan și iubești gusturile intense.");
-    if (answers.includes("Supa cu ciuperci")) profile.push("Ai un spirit calm și apreciezi confortul.");
-    if (answers.includes("Frigarui")) profile.push("Îți place atmosfera de grup și distracția.");
-     if (answers.includes("Sandwichuri")) profile.push("Iti place sa petreci serile bucurantude de mici placeri");
+    if (answers.includes("Shawarma")) profile.push("Iti place ritmul alert, esti spontana, adaptabila. ");
+    if (answers.includes("Supa cu ciuperci")) profile.push("Pretuiesti momentele de tihna, ai nevoie de timp pentru a te reincarca, si o inclinatie naturala spre confort, echilibru si introspectie.");
+    if (answers.includes("Sandwichuri")) profile.push("Nu iti place sa complici lucrurile inutil, pui mare pret pe libertatea de miscare si preferi simplitatea si eficienta.");
+     if (answers.includes("Saleamca")) profile.push("Nu te multumesti cu jumatati de masura, iubesti intensitatea. Aduci impreuna elemente complet diferite pentru a crea ceva memorabil.");
 
     // Childhood stories
-    if (answers.includes("Hansel si Gretel")) profile.push("Ai o fire curioasă și aventuroasă.");
-    if (answers.includes("Alba ca Zapada")) profile.push("Crezi în bunătate și în finaluri fericite.");
-    if (answers.includes("Zorro")) profile.push("Vrei sa traiesti din plin, sa simti intensitatea momentului.");
-    if (answers.includes("Zorro")) profile.push("Vrei sa traiesti din plin, sa simti intensitatea momentului.");
+    if (answers.includes("Zorro")) profile.push("Lupti pentru valorile in care crezi, ai atractie pentru dreptate, mister si eleganta in actiunile tale.");
+    if (answers.includes("Cu Fat Frumos")) profile.push("Te defineste o rezistenta interioara rara , invaluita in parfumul mitic al codrilor seculari , unde lumina si perseverenta triumfa intotdeauana.");
+    if (answers.includes("Craiasa zapezii")) profile.push("Emani o frumusete austera, clara si de o rara finete, combinata cu o loialitate  capabila sa topeasca cele mai reci distante.");
+    if (answers.includes("Alba ca Zapada")) profile.push("Personalitatea ta respira atmosfera luminoasa a unei poieni linistite de padure, plina de armonie si speranta blanda ca bunatatea invinge mereu. Dezvalui o sensibilitate calda, o inocenta ocrotitoare si o mare putere de empatie.");
     
 
 
     // Special combinations
-    if (answers.includes("Literatură") && answers.includes("Noaptea")) {
-      profile.push("Ești un spirit artistic și visător, găsești inspirație în liniștea nopții.");
+    if (answers.includes("La 4 dimineata te duci in mare si inoti pana obosesti.") && answers.includes("Noaptea") && answers.includes("Invizibilitate")) {
+      profile.push(" Iti place neimblazirea, darzenia, cutezanta fara de margini?");
     }
-    if (answers.includes("Matematică") && answers.includes("Dimineața")) {
-      profile.push("Ai o minte logică și disciplinată, cu energie pentru începuturi clare.");
+    if (answers.includes("Mare") && answers.includes("Noaptea")) {
+      profile.push("Danuta?");
     }
-    if (answers.includes("Mare") && answers.includes("Mulți oameni")) {
-      profile.push("Îți place libertatea, dar și compania, ești sociabil și plin de energie.");
+    if (answers.includes("Dimineata") && answers.includes("Casa de la malul marii")) {
+      profile.push("Mama?");
     }
 
     // Final message
